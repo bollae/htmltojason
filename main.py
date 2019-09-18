@@ -29,7 +29,7 @@ rss = soup.find_all('link', attrs={"type": "application/rss+xml"})
 atom = soup.find_all('link', attrs={"type": "application/atom+xml"})
 dic = {'rss' : [], 'atom' :  []}
 
-#The follwing lines check the link href value. If it is relative link, ignore them, if it si absolute path, put a dictionary and export json.
+#The follwing lines check the link href value. If it is relative link, ignore them, if it has absolute path, put in a dictionary and export json.
 for link in atom:
     if 'http' in link.get('href'):
         print(f"Found {link.get('href')}")
