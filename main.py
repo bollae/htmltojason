@@ -34,7 +34,7 @@ else:
 soup = BeautifulSoup(response, 'html.parser')
 rss = soup.find_all('link', attrs={"type": "application/rss+xml"})
 atom = soup.find_all('link', attrs={"type": "application/atom+xml"})
-dic = {'rss': [], 'atom':  []}
+dic = {'rss': [], 'atom': []}
 
 # The follwing lines check the link href value. If it is relative link,
 # ignore them, if it si absolute path, put a dictionary and export json.
